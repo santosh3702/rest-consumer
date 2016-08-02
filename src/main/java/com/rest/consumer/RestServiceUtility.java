@@ -1,7 +1,6 @@
-package com.rest.consumer;
+/*package com.rest.consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,9 +9,10 @@ import com.core.connector.rest.RestClientFactory;
 
 @RestController
 public class RestServiceUtility {
-	//@Resource(name = "factory.restClient")
+	// @Resource(name = "factory.restClient")
+	
+	// @Qualifier("restClientFactory")
 	@Autowired
-	//@Qualifier("restClientFactory")
 	private RestClientFactory restClientFactory;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -21,6 +21,7 @@ public class RestServiceUtility {
 				Quote.class);
 		System.out.println("quote1 " + quote1.toString());
 		return quote1.toString();
-		//return "Data";
+		// return "Data";
 	}
 }
+*/
