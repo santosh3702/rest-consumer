@@ -14,7 +14,7 @@ import com.core.connector.rest.RestClientFactory;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan({"com.rest.consumer","com.core.connector"})
+@ComponentScan({"com.rest.consumer","com.core.connector","com.servicecore.cfg"})
 public class Application  implements CommandLineRunner{
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
@@ -25,6 +25,7 @@ public class Application  implements CommandLineRunner{
 	
 	@Autowired
 	private RestClientFactory restClientFactory;
+	
 	public void run(String... args) throws Exception {
 	        RestTemplate restTemplate = new RestTemplate();
 	        Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
